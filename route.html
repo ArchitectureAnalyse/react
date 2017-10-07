@@ -1,0 +1,16 @@
+<html>
+<head></head>
+
+	<body>
+		<h1>路由原理</h1>
+		<h3><a href="https://developer.mozilla.org/en-US/docs/Web/API/bar.html">history.pushState</a></h3>
+	</body>
+<script type="text/javascript">
+var stateObj = { foo: "bar" };
+history.pushState(stateObj, "page 2", location.href + '?&aa=12');
+window.addEventListener("popstate", function(e) {
+    var state = e.state;
+    console.log(12);
+});
+</script>
+</html>
